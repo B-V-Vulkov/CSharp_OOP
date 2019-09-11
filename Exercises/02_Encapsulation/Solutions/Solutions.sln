@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01.ClassBoxData", "P01.ClassBoxData\P01.ClassBoxData.csproj", "{F1FE73B2-EA29-42AA-BF44-B38027ACFB93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01.ClassBoxData", "P01.ClassBoxData\P01.ClassBoxData.csproj", "{F1FE73B2-EA29-42AA-BF44-B38027ACFB93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02.AnimalFarm", "P02.AnimalFarm\P02.AnimalFarm.csproj", "{355D85B1-206E-42A6-B18A-C5293A553DF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02.AnimalFarm", "P02.AnimalFarm\P02.AnimalFarm.csproj", "{355D85B1-206E-42A6-B18A-C5293A553DF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03.ShoppingSpree", "P03.ShoppingSpree\P03.ShoppingSpree.csproj", "{51FB81FA-0C0F-4F7A-AC76-A87C3F569867}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03.ShoppingSpree", "P03.ShoppingSpree\P03.ShoppingSpree.csproj", "{51FB81FA-0C0F-4F7A-AC76-A87C3F569867}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04.PizzaCalories", "P04.PizzaCalories\P04.PizzaCalories.csproj", "{CC305095-8FEA-45C2-AAFE-DA47B1A0B0B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{51FB81FA-0C0F-4F7A-AC76-A87C3F569867}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51FB81FA-0C0F-4F7A-AC76-A87C3F569867}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51FB81FA-0C0F-4F7A-AC76-A87C3F569867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC305095-8FEA-45C2-AAFE-DA47B1A0B0B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC305095-8FEA-45C2-AAFE-DA47B1A0B0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC305095-8FEA-45C2-AAFE-DA47B1A0B0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC305095-8FEA-45C2-AAFE-DA47B1A0B0B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
