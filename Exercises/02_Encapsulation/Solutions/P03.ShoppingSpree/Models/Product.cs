@@ -8,9 +8,10 @@
         private string name;
         private decimal cost;
 
-        public Product()
+        public Product(string name, decimal cost)
         {
-                
+            this.Name = name;
+            this.Cost = cost;
         }
 
         public string Name
@@ -23,7 +24,7 @@
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentException(ExceptionMessages.nullOrEmptyNameException);
+                    throw new ArgumentException(ExceptionMessages.NullOrEmptyNameException);
                 }
 
                 this.name = value;
@@ -40,12 +41,16 @@
             {
                 if (value < 0 )
                 {
-                    throw new ArgumentException(ExceptionMessages.negativeMoneyExceptio);
+                    throw new ArgumentException(ExceptionMessages.NegativeMoneyExceptio);
                 }
 
                 this.cost = value;
             }
         }
 
+        public override string ToString()
+        {
+            return this.Name;
+        }
     }
 }

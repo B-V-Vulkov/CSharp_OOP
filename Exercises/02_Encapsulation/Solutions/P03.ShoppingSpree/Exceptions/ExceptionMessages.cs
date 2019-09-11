@@ -2,10 +2,13 @@
 {
     class ExceptionMessages
     {
-        public static string nullOrEmptyNameException =
+        public static string NullOrEmptyNameException =
             "Name cannot be empty";
 
-        public static string negativeMoneyExceptio =
+        public static string NegativeMoneyExceptio =
             "Money cannot be negative";
+
+        public static string CannotAffordProductExceptio =
+            "{0} can't afford {1}";
     }
 }

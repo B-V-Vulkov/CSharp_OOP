@@ -3,6 +3,7 @@
 namespace P03.ShoppingSpree.Models
 {
     using System;
+    using Exceptions;
 
     public class Person
     {
@@ -13,6 +14,8 @@ namespace P03.ShoppingSpree.Models
         public Person(string name, decimal money)
         {
             this.bagOfProducts = new List<Product>();
+            this.Name = name;
+            this.Money = money;
         }
 
         public string Name
@@ -23,9 +26,9 @@ namespace P03.ShoppingSpree.Models
             }
             private set
             {
-                if (value == string.Empty)
+                if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new Exception("Name cannot be empty");
+                    throw new ArgumentException(ExceptionMessages.NullOrEmptyNameException);
                 }
 
                 this.name = value;
@@ -38,16 +41,38 @@ namespace P03.ShoppingSpree.Models
             {
                 return this.money;
             }
-            set
+            private set
             {
                 if (value < 0)
                 {
-                    throw new Exception("Money cannot be negative");
+                    throw new ArgumentException(ExceptionMessages.NegativeMoneyExceptio);
                 }
 
                 this.money = value;
             }
         }
 
+        public void BuyProduct(Product product)
+        {
+            decimal moneyLeft = this.Money - product.Cost;
+
+            if (moneyLeft < 0)
+            {
+                throw new InvalidOperationException(string.Format(ExceptionMessages.CannotAffordProductExceptio ,this.Name, product.Name));
+            }
+
+            this.Money = moneyLeft;
+            this.bagOfProducts.Add(product);
+        }
+
+        public override string ToString()
+        {
+            if (this.bagOfProducts.Count == 0)
+            {
+                return $"{this.Name} - Nothing bought";
+            }
+
+            return $"{this.Name} - {string.Join(", ", this.bagOfProducts)}";
+        }
     }
 }
