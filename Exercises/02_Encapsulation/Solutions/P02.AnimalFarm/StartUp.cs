@@ -2,9 +2,10 @@
 {
     using System;
     using AnimalFarm.Models;
-    class Program
+
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             string name = Console.ReadLine();
             int age = int.Parse(Console.ReadLine());

@@ -22,10 +22,11 @@ namespace AnimalFarm.Models
 
             set
             {
-                if (value == string.Empty || value == null)
+                if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new Exception("Name cannot be empty.");
                 }
+
                 this.name = value;
             }
         }
