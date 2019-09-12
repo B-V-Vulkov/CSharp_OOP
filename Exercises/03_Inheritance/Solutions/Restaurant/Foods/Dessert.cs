@@ -1,0 +1,25 @@
+﻿namespace Restaurant.Foods
+{
+    public class Dessert : Food
+    {
+        private double calories;
+
+        public Dessert(string name, decimal price, double grams, double calories)
+            : base(name, price, grams)
+        {
+            this.Calories = calories;
+        }
+
+        public virtual double Calories
+        {
+            get
+            {
+                return this.calories;
+            }
+            private set
+            {
+                this.calories = value;
+            }
+        }
+    }
+}
