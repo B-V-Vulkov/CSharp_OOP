@@ -1,4 +1,4 @@
-﻿namespace Restaurant.Foods
+﻿namespace Restaurant.Foods.Starter
 {
     public class Soup : Starter
     {

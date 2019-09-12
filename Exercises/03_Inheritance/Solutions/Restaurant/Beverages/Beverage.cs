@@ -10,16 +10,6 @@
             this.Milliliters = milliliters;
         }
 
-        public double Milliliters
-        {
-            get
-            {
-                return this.milliliters;
-            }
-            private set
-            {
-                this.milliliters = value;
-            }
-        }
+        public double Milliliters { get; set; }
     }
 }

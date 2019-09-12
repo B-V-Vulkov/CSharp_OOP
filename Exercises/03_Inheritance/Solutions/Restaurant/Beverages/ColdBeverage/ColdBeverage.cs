@@ -1,4 +1,4 @@
-﻿namespace Restaurant.Beverages
+﻿namespace Restaurant.Beverages.ColdBeverage
 {
     public class ColdBeverage : Beverage
     {
