@@ -51,8 +51,6 @@
             int totalFood = people.Sum(f => f.Food);
 
             Console.WriteLine(totalFood);
-
-            
         }
     }
 }
