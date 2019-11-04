@@ -1,0 +1,11 @@
+C:\SoftUni\C# Advanced\CSharp_OOP\Exercises\02_Inheritance\Solutions\P01.Person\bin\Debug\netcoreapp3.0\P01.Person.exe
+C:\SoftUni\C# Advanced\CSharp_OOP\Exercises\02_Inheritance\Solutions\P01.Person\bin\Debug\netcoreapp3.0\P01.Person.deps.json
+C:\SoftUni\C# Advanced\CSharp_OOP\Exercises\02_Inheritance\Solutions\P01.Person\bin\Debug\netcoreapp3.0\P01.Person.runtimeconfig.json
+C:\SoftUni\C# Advanced\CSharp_OOP\Exercises\02_Inheritance\Solutions\P01.Person\bin\Debug\netcoreapp3.0\P01.Person.runtimeconfig.dev.json
+C:\SoftUni\C# Advanced\CSharp_OOP\Exercises\02_Inheritance\Solutions\P01.Person\bin\Debug\netcoreapp3.0\P01.Person.dll
+C:\SoftUni\C# Advanced\CSharp_OOP\Exercises\02_Inheritance\Solutions\P01.Person\bin\Debug\netcoreapp3.0\P01.Person.pdb
+C:\SoftUni\C# Advanced\CSharp_OOP\Exercises\02_Inheritance\Solutions\P01.Person\obj\Debug\netcoreapp3.0\P01.Person.csprojAssemblyReference.cache
+C:\SoftUni\C# Advanced\CSharp_OOP\Exercises\02_Inheritance\Solutions\P01.Person\obj\Debug\netcoreapp3.0\P01.Person.AssemblyInfoInputs.cache
+C:\SoftUni\C# Advanced\CSharp_OOP\Exercises\02_Inheritance\Solutions\P01.Person\obj\Debug\netcoreapp3.0\P01.Person.AssemblyInfo.cs
+C:\SoftUni\C# Advanced\CSharp_OOP\Exercises\02_Inheritance\Solutions\P01.Person\obj\Debug\netcoreapp3.0\P01.Person.dll
+C:\SoftUni\C# Advanced\CSharp_OOP\Exercises\02_Inheritance\Solutions\P01.Person\obj\Debug\netcoreapp3.0\P01.Person.pdb
