@@ -1,12 +1,10 @@
-﻿using System;
-
-namespace P03.PlayersAndMonsters
+﻿namespace PlayersAndMonsters
 {
-    class Program
+    public class StartUp
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine("Hello World!");
+
         }
     }
 }
