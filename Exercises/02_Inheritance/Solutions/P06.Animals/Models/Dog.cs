@@ -3,22 +3,15 @@
     using Common;
     using Common.Enumerations;
 
-    public class Dog : IAnimal
+    public class Dog : Animal
     {
-        public Dog(string name, int age, Gender gender)
+        public Dog(string name, int age, Gender gender) 
+            : base(name, age, gender)
         {
-            this.Name = name;
-            this.Age = age;
-            this.Gender = gender;
+
         }
 
-        public string Name { get; set; }
-
-        public int Age { get; set; }
-
-        public Gender Gender { get; set; }
-
-        public string ProduceSound()
+        public override string ProduceSound()
         {
             return "Woof!";
         }

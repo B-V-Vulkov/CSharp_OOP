@@ -11,7 +11,7 @@
     {
         public static void Main()
         {
-            var animals = new List<IAnimal>();
+            var animals = new List<Animal>();
 
             string command = String.Empty;
 
@@ -20,46 +20,35 @@
                 string[] animalInfo = Console.ReadLine()
                     .Split(' ');
 
-                string name = null;
-                int age = 0;
-                Gender gender = Gender.Unknown;
-
                 try
                 {
-                    if (animalInfo.Length == 2)
+                    string name = String.Empty;
+
+                    if (animalInfo.Length > 0)
                     {
                         name = animalInfo[0];
-                        age = int.Parse(animalInfo[1]);
                     }
-                    else if (animalInfo.Length == 3)
+
+                    if (!int.TryParse(animalInfo[1], out int age))
                     {
-                        name = animalInfo[0];
-                        age = int.Parse(animalInfo[1]);
+                        throw new ArgumentException("Invalid input!");
+                    }
 
-                        string genderString = animalInfo[2];
+                    Gender gender = Gender.Unknown;
 
-                        if (genderString == Gender.Male.ToString())
+                    if (animalInfo.Length == 3)
+                    {
+                        if (animalInfo[2] == Gender.Male.ToString())
                         {
                             gender = Gender.Male;
                         }
-                        else if (genderString == Gender.Female.ToString())
+                        else if (animalInfo[2] == Gender.Female.ToString())
                         {
                             gender = Gender.Female;
                         }
-                        else
-                        {
-                            throw new InvalidOperationException("Invalid input!");
-                        }
+                    }
 
-                        if (age < 0)
-                        {
-                            throw new InvalidOperationException("Invalid input!");
-                        }
-                    }
-                    else
-                    {
-                        throw new InvalidOperationException("Invalid input!");
-                    }
+                    command = command.ToLower();
 
                     if (command == "Dog")
                     {
@@ -87,16 +76,15 @@
                         animals.Add(animal);
                     }
                 }
-                catch (InvalidOperationException ioex)
+                catch (Exception ex)
                 {
-                    Console.WriteLine(ioex.Message);
+                    Console.WriteLine(ex.Message);
                 }
             }
 
             foreach (var animal in animals)
             {
-                Console.WriteLine($"{animal.GetType().Name}");
-                Console.WriteLine($"{animal.Name} {animal.Age} {animal.Gender}");
+                Console.WriteLine(animal);
                 Console.WriteLine($"{animal.ProduceSound()}");
             }
         }
