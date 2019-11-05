@@ -5,13 +5,15 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P01.Person", "P01.Person\P01.Person.csproj", "{04F9E8BC-BF3B-43C3-9662-217618CEA61F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02.Zoo", "P02.Zoo\P02.Zoo.csproj", "{37D98403-7A58-4620-9DF9-4205997410C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P02.Zoo", "P02.Zoo\P02.Zoo.csproj", "{37D98403-7A58-4620-9DF9-4205997410C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03.PlayersAndMonsters", "P03.PlayersAndMonsters\P03.PlayersAndMonsters.csproj", "{AD1EFEB1-92D3-4FAB-987B-B4303B0D8999}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P03.PlayersAndMonsters", "P03.PlayersAndMonsters\P03.PlayersAndMonsters.csproj", "{AD1EFEB1-92D3-4FAB-987B-B4303B0D8999}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04.NeedForSpeed", "P04.NeedForSpeed\P04.NeedForSpeed.csproj", "{097C2F5F-C710-4BC7-9C7E-56BFB3A1CCE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P04.NeedForSpeed", "P04.NeedForSpeed\P04.NeedForSpeed.csproj", "{097C2F5F-C710-4BC7-9C7E-56BFB3A1CCE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P05.Restaurant", "P05.Restaurant\P05.Restaurant.csproj", "{6D5209C7-E73B-4776-A4B0-D9B664BC3321}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "P05.Restaurant", "P05.Restaurant\P05.Restaurant.csproj", "{6D5209C7-E73B-4776-A4B0-D9B664BC3321}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P06.Animals", "P06.Animals\P06.Animals.csproj", "{DF954C70-B4B3-48AD-841D-2CF9F85B6A7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{6D5209C7-E73B-4776-A4B0-D9B664BC3321}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D5209C7-E73B-4776-A4B0-D9B664BC3321}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D5209C7-E73B-4776-A4B0-D9B664BC3321}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF954C70-B4B3-48AD-841D-2CF9F85B6A7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF954C70-B4B3-48AD-841D-2CF9F85B6A7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF954C70-B4B3-48AD-841D-2CF9F85B6A7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF954C70-B4B3-48AD-841D-2CF9F85B6A7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

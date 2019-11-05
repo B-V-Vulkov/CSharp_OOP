@@ -1,8 +1,8 @@
-﻿using System;
-using System.Text;
-
-namespace Person
+﻿namespace Person
 {
+    using System;
+    using System.Text;
+
     class Person
     {
         private string name;
