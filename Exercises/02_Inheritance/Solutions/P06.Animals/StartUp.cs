@@ -4,13 +4,13 @@
     using System.Collections.Generic;
 
     using Common;
-    using Common.Enumerations;
     using Models;
 
     public class StartUp
     {
         public static void Main()
         {
+
             var animals = new List<Animal>();
 
             string command = String.Empty;
@@ -34,43 +34,36 @@
                         throw new ArgumentException("Invalid input!");
                     }
 
-                    Gender gender = Gender.Unknown;
+                    string gender = string.Empty;
 
                     if (animalInfo.Length == 3)
                     {
-                        if (animalInfo[2] == Gender.Male.ToString())
-                        {
-                            gender = Gender.Male;
-                        }
-                        else if (animalInfo[2] == Gender.Female.ToString())
-                        {
-                            gender = Gender.Female;
-                        }
+                        gender = animalInfo[2];
                     }
 
                     command = command.ToLower();
 
-                    if (command == "Dog")
+                    if (command == "dog")
                     {
                         var animal = new Dog(name, age, gender);
                         animals.Add(animal);
                     }
-                    else if (command == "Cat")
+                    else if (command == "cat")
                     {
                         var animal = new Cat(name, age, gender);
                         animals.Add(animal);
                     }
-                    else if (command == "Frog")
+                    else if (command == "frog")
                     {
                         var animal = new Frog(name, age, gender);
                         animals.Add(animal);
                     }
-                    else if (command == "Kitten")
+                    else if (command == "kitten")
                     {
                         var animal = new Kitten(name, age);
                         animals.Add(animal);
                     }
-                    else if (command == "Tomcat")
+                    else if (command == "tomcat")
                     {
                         var animal = new Tomcat(name, age);
                         animals.Add(animal);

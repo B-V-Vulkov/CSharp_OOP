@@ -1,11 +1,10 @@
 ﻿namespace Animals.Models
 {
     using Common;
-    using Common.Enumerations;
 
     public class Frog : Animal
     {
-        public Frog(string name, int age, Gender gender) 
+        public Frog(string name, int age, string gender) 
             : base(name, age, gender)
         {
 
