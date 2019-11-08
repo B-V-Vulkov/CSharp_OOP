@@ -3,17 +3,15 @@
     using System;
     using System.Text;
 
-    using Enumerations;
-
     public abstract class Animal : IProduceSound
     {
         private const string InvalidInputExceptionMessage = "Invalid input!";
 
         private string name;
         private int age;
-        private Gender gender;
+        private string gender;
 
-        public Animal(string name, int age, Gender gender)
+        public Animal(string name, int age, string gender)
         {
             this.Name = name;
             this.Age = age;
@@ -54,7 +52,7 @@
             }
         }
 
-        public Gender Gender
+        public string Gender
         {
             get
             {
@@ -62,7 +60,7 @@
             }
             protected set
             {
-                if (value == Gender.Unknown)
+                if (IsNotValid(value))
                 {
                     throw new InvalidOperationException(InvalidInputExceptionMessage);
                 }
