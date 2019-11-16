@@ -40,7 +40,7 @@
 
         public virtual void Refuel(double fule)
         {
-            if (this.FuelQuantity + fule > this.TankCapacity)
+            if (this.fuelQuantity + fule > this.TankCapacity)
             {
                 throw new InvalidOperationException($"Cannot fit {fule} fuel in the tank");
             }

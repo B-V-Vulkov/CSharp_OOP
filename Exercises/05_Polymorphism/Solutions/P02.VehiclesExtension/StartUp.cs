@@ -2,91 +2,51 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
+
     using Models;
+    using Readers;
 
     public class StartUp
     {
         public static void Main()
         {
-            var carInfo = Console.ReadLine()
-                .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            var vehicles = new List<Vehicle>();
 
-            double carFuelQuantity = double.Parse(carInfo[1]);
-            double carFuelConsumption = double.Parse(carInfo[2]);
-            double carTankCapacity = double.Parse(carInfo[3]);
+            vehicles.Add(CreateCar());
+            vehicles.Add(CreateTruck());
+            vehicles.Add(CreateBus());
 
-            var truckInfo = Console.ReadLine()
-                .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            int numberCommans = int.Parse(Console.ReadLine());
 
-            double truckFuelQuantity = double.Parse(truckInfo[1]);
-            double truckFuelConsumption = double.Parse(truckInfo[2]);
-            double truckTankCapacity = double.Parse(truckInfo[3]);
-
-            var busInfo = Console.ReadLine()
-                .Split(' ', StringSplitOptions.RemoveEmptyEntries);
-
-            double busFuelQuantity = double.Parse(busInfo[1]);
-            double busFuelConsumption = double.Parse(busInfo[2]);
-            double busTankCapacity = double.Parse(busInfo[3]);
-
-            Car car = new Car(carFuelQuantity, carFuelConsumption, carTankCapacity);
-            Truck truck = new Truck(truckFuelQuantity, truckFuelConsumption, truckTankCapacity);
-            Bus bus = new Bus(busFuelQuantity, busFuelConsumption, busTankCapacity);
-
-            int rowCommans = int.Parse(Console.ReadLine());
-
-            for (int i = 1; i <= rowCommans; i++)
+            for (int i = 1; i <= numberCommans; i++)
             {
-                string input = Console.ReadLine();
-                var splittedInput = input
+                var splittedInput = Console.ReadLine()
                     .Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-                string command = splittedInput[0].ToUpper();
-                string type = splittedInput[1].ToUpper();
+                string command = splittedInput[0];
+                string type = splittedInput[1];
                 double value = double.Parse(splittedInput[2]);
 
                 try
                 {
-                    if (type == "CAR")
+                    if (command == "Drive")
                     {
-                        if (command == "DRIVE")
+                        foreach (var vehicle in vehicles)
                         {
-                            Console.WriteLine(car.Drive(value));
-                        }
-                        else if (command == "REFUEL")
-                        {
-                            car.Refuel(value);
+                            if (vehicle.GetType().Name == type)
+                            {
+                                vehicle.Drive(value);
+                            }
                         }
                     }
-
-                    else if (type == "TRUCK")
+                    else if (command == "Refuel")
                     {
-                        if (command == "DRIVE")
+                        foreach (var vehicle in vehicles)
                         {
-                            Console.WriteLine(truck.Drive(value));
-                        }
-                        else if (command == "REFUEL")
-                        {
-                            truck.Refuel(value);
-                        }
-                    }
-
-                    else if (type == "BUS")
-                    {
-                        if (command == "DRIVE")
-                        {
-                            bus.IsEmpty = false;
-                            Console.WriteLine(bus.Drive(value));
-                        }
-                        else if (command == "DRIVEEMPTY")
-                        {
-                            bus.IsEmpty = true;
-                            Console.WriteLine(bus.Drive(value));
-                        }
-                        else if (command == "REFUEL")
-                        {
-                            bus.Refuel(value);
+                            if (vehicle.GetType().Name == type)
+                            {
+                                vehicle.Refuel(value);
+                            }
                         }
                     }
                 }
@@ -95,10 +55,47 @@
                     Console.WriteLine(ioex.Message);
                 }
             }
+        }
 
-            Console.WriteLine(car);
-            Console.WriteLine(truck);
-            Console.WriteLine(bus);
+        public static Car CreateCar()
+        {
+            var vehicleInfoReader = GetVehicleInfo();
+
+            return new Car(vehicleInfoReader.FuelQuantity, 
+                vehicleInfoReader.FuelConsumption, 
+                vehicleInfoReader.TankCapacity);
+        }
+
+        public static Truck CreateTruck()
+        {
+            var vehicleInfoReader = GetVehicleInfo();
+
+            return new Truck(vehicleInfoReader.FuelQuantity,
+                vehicleInfoReader.FuelConsumption,
+                vehicleInfoReader.TankCapacity);
+        }
+
+        public static Bus CreateBus()
+        {
+            var vehicleInfoReader = GetVehicleInfo();
+
+            return new Bus(vehicleInfoReader.FuelQuantity,
+                vehicleInfoReader.FuelConsumption,
+                vehicleInfoReader.TankCapacity);
+        }
+
+        public static VehicleInfoReader GetVehicleInfo()
+        {
+            var inputInfo = Console.ReadLine()
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            VehicleInfoReader vehicleInfoReader = new VehicleInfoReader();
+
+            vehicleInfoReader.FuelQuantity = double.Parse(inputInfo[1]);
+            vehicleInfoReader.FuelConsumption = double.Parse(inputInfo[2]);
+            vehicleInfoReader.TankCapacity = double.Parse(inputInfo[3]);
+
+            return vehicleInfoReader;
         }
     }
 }
